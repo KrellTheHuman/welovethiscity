@@ -1,22 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<GridLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" android:layout_gravity="center"
-        android:weightSum="1" android:background="@drawable/background"
->
-    <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/guideScrollView" android:layout_column="2" android:layout_span="1"
-                android:layout_gravity="fill_vertical">
+        android:weightSum="1" android:background="@drawable/background" android:gravity="center" android:rowCount="2"
+        android:id="@+id/mainGridLayout" android:columnCount="3">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:gravity="start" android:layout_row="0"
+            android:layout_column="0" android:layout_gravity="center_vertical">
+        <ImageButton
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/profileImageButton" android:src="@drawable/profile" android:background="@null"
+                android:contentDescription="@string/missions"
+                android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="700dp"
+            android:id="@+id/guideScrollView"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none" android:layout_column="1" android:layout_row="0">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/reportImageButton1"/>
-        </ScrollView>
-    </TableRow>
-</TableLayout>
+                    android:id="@+id/reportImageButton1" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton2" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton3" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton4" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton5" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton6" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton7" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton8" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reportImageButton9" android:src="@drawable/report_button"
+                    android:contentDescription="@string/report_button" android:background="@null"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:gravity="end" android:layout_column="2"
+                  android:layout_row="0" android:layout_gravity="center_vertical">
+        <ImageButton
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/missionsImageButton" android:src="@drawable/missions" android:background="@null"
+                android:layout_gravity="center_vertical" android:contentDescription="@string/missions"/>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/policeImageView" android:layout_row="1" android:layout_column="0"
+            android:layout_columnSpan="3" android:layout_rowSpan="1" android:src="@drawable/police"
+            android:layout_gravity="bottom" android:background="@null"/>
+</GridLayout>

@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">WeLoveThisCity</string>
     <string name="loading_title">loading_title</string>
+    <string name="report_button">report_button</string>
+    <string name="missions">missions</string>
 </resources>
